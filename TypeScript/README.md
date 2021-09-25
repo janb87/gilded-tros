@@ -19,8 +19,7 @@
 
 Bonus:
 
-- [ ] Enable strictNullChecks TS option again
-- [ ] Setup CI to run tests automatically on push
+- [x] Enable strictNullChecks TS option again
 
 ## Architecture
 
@@ -40,3 +39,4 @@ Decided to use following architecture:
 - Add tests to see if exception handling of the [qualityCalculatorFactory](./src/app/quality-calculator/qualityCalculatorFactory.ts] is working as expected
 - If we ever face performance issue offload the calculation logic to a worker thread, process the items in chunks (eg per 1000) so we can show progress
 - Add logic to dynamically load all implementations from a directory instead of importing one by one
+- Setup CI to run tests automatically on push
