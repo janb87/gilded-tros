@@ -1,6 +1,9 @@
 import { Product } from '../models/product';
+import { BackstagePassQualityCalculator } from './implementations/backstagePassQualityCalculator';
 import { DefaultQualityCalculator } from './implementations/defaultQualityCalculator';
 import { GoodWineQualityCalculator } from './implementations/goodWineQualityCalculator';
+import { LegendaryQualityCalculator } from './implementations/legendaryQualityCalculator';
+import { SmellyItemQualityCalculator } from './implementations/smellyItemQualityCalculator';
 import {
     QualityCalculator,
     QualityCalculatorConstructor,
@@ -9,6 +12,9 @@ import {
 const IMPLEMENTATIONS: QualityCalculatorConstructor[] = [
     DefaultQualityCalculator,
     GoodWineQualityCalculator,
+    LegendaryQualityCalculator,
+    BackstagePassQualityCalculator,
+    SmellyItemQualityCalculator,
 ];
 
 export class MissingQualityCalculatorError extends Error {}

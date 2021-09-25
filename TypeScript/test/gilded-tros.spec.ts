@@ -111,7 +111,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should never decrease Quality of Legendary items', () => {
+    test('it should never decrease Quality of Legendary items', () => {
         const items: Item[] = [
             {
                 name: LEGENDARY_ITEM_NAME,
@@ -126,7 +126,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should increase Backstage passes Quality by 2, 10 to 5 days before the SellIn value is reached', () => {
+    test('it should increase Backstage passes Quality by 2, 10 to 5 days before the SellIn value is reached', () => {
         const items: Item[] = [
             {
                 name: BACKSTAGE_PASS_REFACTOR_ITEM_NAME,
@@ -138,12 +138,11 @@ describe('GildedTrosTest', () => {
                 quality: 18,
                 sellIn: 10,
             },
-            /* TODO: Fix bug in implementation
             {
                 name: BACKSTAGE_PASS_HAXX_ITEM_NAME,
                 quality: 5,
                 sellIn: 10,
-            },*/
+            },
         ];
         runUpdateQuality({
             days: 5,
@@ -165,7 +164,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should increase Backstage passes Quality by 3, 5 days or less before the SellIn value is reached', () => {
+    test('it should increase Backstage passes Quality by 3, 5 days or less before the SellIn value is reached', () => {
         const items: Item[] = [
             {
                 name: BACKSTAGE_PASS_REFACTOR_ITEM_NAME,
@@ -177,12 +176,11 @@ describe('GildedTrosTest', () => {
                 quality: 18,
                 sellIn: 5,
             },
-            /* TODO: Fix bug in implementation
             {
                 name: BACKSTAGE_PASS_HAXX_ITEM_NAME,
                 quality: 5,
                 sellIn: 5,
-            },*/
+            },
         ];
         runUpdateQuality({
             days: 3,
@@ -197,7 +195,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should set the Quality of Backstage passes to 0 when the SellIn value is negative', () => {
+    test('it should set the Quality of Backstage passes to 0 when the SellIn value is negative', () => {
         const items: Item[] = [
             {
                 name: BACKSTAGE_PASS_REFACTOR_ITEM_NAME,
@@ -223,7 +221,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should never set a Quality bigger then 50 if it is not a Legendary item', () => {
+    test('it should never set a Quality bigger then 50 if it is not a Legendary item', () => {
         const items: Item[] = [
             {
                 name: GOOD_WINE_ITEM_NAME,
@@ -262,7 +260,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should always set the Quality of a lengendary item to 80', () => {
+    test('it should always set the Quality of a lengendary item to 80', () => {
         const items: Item[] = [
             {
                 name: LEGENDARY_ITEM_NAME,
@@ -283,7 +281,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should degrade Quality of smelly items twice as fast', () => {
+    test('it should degrade Quality of smelly items twice as fast', () => {
         const items: Item[] = SMELLY_ITEM_NAMES.map((name, index): Item => {
             return {
                 name: name,
