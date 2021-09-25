@@ -15,7 +15,7 @@
 - [x] Write test for all requirements
 - [x] Define architecture / patterns to use
 - [x] Refactor + cleanup existing code (improve item model, prevent checks on labels)
-- [ ] Implement and enable all tests
+- [x] Implement and enable all tests
 
 Bonus:
 

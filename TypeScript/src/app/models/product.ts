@@ -8,6 +8,7 @@ import { ProductType } from './productType';
  *    - we can add the type property
  *    - mark all properties as read-only
  *    - use an object as input for the constructor (to avoid for example passing quality and sellIn in the wrong order)
+ *    - replace toString with print (prevent overwriting default methods from the Ojbect.prototype)
  */
 export class Product implements Item {
     public constructor(item: Item) {
@@ -21,4 +22,15 @@ export class Product implements Item {
     public readonly sellIn: number;
     public readonly quality: number;
     public readonly type: ProductType;
+
+    public print(): string {
+        return Item.prototype.toString.call(this);
+    }
+
+    /**
+     * DEPRECATED: use print method
+     */
+    public toString(): string {
+        return Item.prototype.toString.call(this);
+    }
 }

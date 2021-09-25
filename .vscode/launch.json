@@ -14,7 +14,11 @@
         "-r",
         "tsconfig-paths/register"
       ],
-      "args": ["${workspaceRoot}/TypeScript/test/text-test-fixture.ts", "-f"],
+      "args": [
+        "${workspaceRoot}/TypeScript/test/text-test-fixture.ts",
+        "3",
+        "-f"
+      ],
       "sourceMaps": true,
       "cwd": "${workspaceRoot}/TypeScript",
       "console": "integratedTerminal"

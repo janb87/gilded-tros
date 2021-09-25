@@ -1,5 +1,6 @@
 import { Item } from '../src/item';
 import { GildedTros } from '../src/gilded-tros';
+import { Product } from '../src/app/models/product';
 
 const LEGENDARY_ITEM_NAME = 'B-DAWG Keychain';
 const GOOD_WINE_ITEM_NAME = 'Good Wine';
@@ -27,9 +28,10 @@ function runUpdateQuality({
     const app = getAppInstance(items);
     for (let day = 1; day < days; day++) {
         app.updateQuality();
-        expect(app.items).toEqual(
-            items.map((originalItem) => {
-                return getExpectedItem(originalItem, day);
+        expect(app.items.map((item) => new Product(item))).toEqual(
+            items.map((originalItem): Product => {
+                const item = getExpectedItem(originalItem, day);
+                return new Product(item);
             })
         );
     }
