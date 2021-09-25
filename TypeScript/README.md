@@ -37,4 +37,6 @@ Decided to use following architecture:
 - Create unit tests for `getProductType` function, this to ensure that the conversion is done correctly
 - Create unit tests for each qualityCalculator implementation,
   the current tests whe have are ok but it might be hard to figur out at some point where it is failing if we add many more implementations of the qualityCalculator
+- Add tests to see if exception handling of the [qualityCalculatorFactory](./src/app/quality-calculator/qualityCalculatorFactory.ts] is working as expected
 - If we ever face performance issue offload the calculation logic to a worker thread, process the items in chunks (eg per 1000) so we can show progress
+- Add logic to dynamically load all implementations from a directory instead of importing one by one

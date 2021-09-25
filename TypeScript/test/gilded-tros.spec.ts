@@ -62,7 +62,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should degrade the Quality twice as fast after the SellIn date is reached', () => {
+    test('it should degrade the Quality twice as fast after the SellIn date is reached', () => {
         const items: Item[] = [
             {
                 name: 'Foo',
@@ -83,7 +83,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    xtest('it should increase the Quality of wine the older it gets', () => {
+    test('it should increase the Quality of wine the older it gets', () => {
         const items: Item[] = [
             {
                 name: GOOD_WINE_ITEM_NAME,
