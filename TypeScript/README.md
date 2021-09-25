@@ -13,13 +13,9 @@
 
 - [x] Read requirements
 - [x] Write test for all requirements
-- [ ] Refactor + cleanup existing code (improve item model, prevent checks on labels)
-- [ ] Identify missing features / bugs
-- [ ] Define architecture / patterns to use
-
-- Implementation of missing features (TDD)
-  - [ ] Feature A
-  - [ ] Feature B
+- [x] Define architecture / patterns to use
+- [x] Refactor + cleanup existing code (improve item model, prevent checks on labels)
+- [ ] Implement and enable all tests
 
 Bonus:
 
@@ -32,10 +28,13 @@ Decided to use following architecture:
 
 - Split quality calculation logic per type, this way it is easy to add new calculations for new types in the future.
   An interface is used to define the contract. For common logic an abstract base class is used. Decorators are used to describe for which type a calculation class should be used.
-- Use a factory pattern to get the right instance for calculating the next Qaulity and Sell In values
+- Use a factory pattern to get the correct instance for calculating the next Qaulity and Sell In values
 
 ## Ideas to improve the implementation
 
-- Write the tests directly on the `[updateQuality](./src/app/index.ts]` function (prevent side effects as the GildedTros app mutates the incoming items array).
+- Convert GildedTros to a singleton (requires discussion with the QA team as they are depending on the API)
+- Write the tests directly on the `[updateQuality](./src/app/index.ts]` function (prevent side effects as the GildedTros app mutates the incoming items array)
 - Create unit tests for `getProductType` function, this to ensure that the conversion is done correctly
-- Create unit tests for each qualityCalculator implementation
+- Create unit tests for each qualityCalculator implementation,
+  the current tests whe have are ok but it might be hard to figur out at some point where it is failing if we add many more implementations of the qualityCalculator
+- If we ever face performance issue offload the calculation logic to a worker thread, process the items in chunks (eg per 1000) so we can show progress

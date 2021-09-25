@@ -62,7 +62,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should degrade the Quality twice as fast after the SellIn date is reached', () => {
+    xtest('it should degrade the Quality twice as fast after the SellIn date is reached', () => {
         const items: Item[] = [
             {
                 name: 'Foo',
@@ -83,7 +83,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should increase the Quality of wine the older it gets', () => {
+    xtest('it should increase the Quality of wine the older it gets', () => {
         const items: Item[] = [
             {
                 name: GOOD_WINE_ITEM_NAME,
@@ -111,7 +111,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should never decrease Quality of Legendary items', () => {
+    xtest('it should never decrease Quality of Legendary items', () => {
         const items: Item[] = [
             {
                 name: LEGENDARY_ITEM_NAME,
@@ -126,7 +126,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should increase Backstage passes Quality by 2, 10 to 5 days before the SellIn value is reached', () => {
+    xtest('it should increase Backstage passes Quality by 2, 10 to 5 days before the SellIn value is reached', () => {
         const items: Item[] = [
             {
                 name: BACKSTAGE_PASS_REFACTOR_ITEM_NAME,
@@ -165,7 +165,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should increase Backstage passes Quality by 3, 5 days or less before the SellIn value is reached', () => {
+    xtest('it should increase Backstage passes Quality by 3, 5 days or less before the SellIn value is reached', () => {
         const items: Item[] = [
             {
                 name: BACKSTAGE_PASS_REFACTOR_ITEM_NAME,
@@ -223,7 +223,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should never set a Quality bigger then 50 if it is not a Legendary item', () => {
+    xtest('it should never set a Quality bigger then 50 if it is not a Legendary item', () => {
         const items: Item[] = [
             {
                 name: GOOD_WINE_ITEM_NAME,
@@ -262,7 +262,7 @@ describe('GildedTrosTest', () => {
         });
     });
 
-    test('it should always set the Quality of a lengendary item to 80', () => {
+    xtest('it should always set the Quality of a lengendary item to 80', () => {
         const items: Item[] = [
             {
                 name: LEGENDARY_ITEM_NAME,
