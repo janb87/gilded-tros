@@ -1,21 +1,33 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
     "target": "ES2020",
     "module": "commonjs",
-    "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./",
-    "removeComments": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "strictNullChecks": false // TODO: enable again
   },
   "include": [
     "**/src",
-    "test/text-test-fixture.ts"
-  ]
+    "**/test"
+  ],
+  "exclude": ["node_modules", "tmp"]
 }
+

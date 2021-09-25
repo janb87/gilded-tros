@@ -1,14 +1,15 @@
 # TODO
 
 - Project Setup
-    - [ ] Ensure that all packages are up to date
-    - [x] Add .nvmrc file for node.js version
-    - [ ] Setup Typescript correctly
-    - [x] Setup Editorconfig
-    - [ ] Setup debugging with VSCode
-    - [ ] Setup eslint + fix errors and warnings
 
-- [ ] Read requirements
+  - [x] Ensure that all packages are up to date
+  - [x] Add .nvmrc file for node.js version
+  - [x] Setup Typescript correctly
+  - [x] Setup Editorconfig
+  - [x] Setup debugging with VSCode
+  - [x] Setup eslint + fix errors and warnings
+
+- [x] Read requirements
 - [ ] Write test for all requirements
 - [ ] Refactor + cleanup existing code (improve item model, prevent checks on labels)
 - [ ] Identify missing features / bugs
@@ -20,6 +21,7 @@
 
 Bonus:
 
+- [ ] Enable strictNullChecks TS option again
 - [ ] Setup CI to run tests automatically on push
 
 ## Architecture ideas

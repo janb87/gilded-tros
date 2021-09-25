@@ -1,5 +1,5 @@
-import {Item} from '../src/item';
-import {GildedTros} from '../src/gilded-tros';
+import { Item } from '../src/item';
+import { GildedTros } from '../src/gilded-tros';
 
 console.log('AXXES CODE KATA - GILDED TROS');
 
@@ -15,7 +15,7 @@ const items: Item[] = [
     // these smelly items do not work properly yet
     new Item('Duplicate Code', 3, 6),
     new Item('Long Methods', 3, 6),
-    new Item('Ugly Variable Names', 3, 6)
+    new Item('Ugly Variable Names', 3, 6),
 ];
 
 const app: GildedTros = new GildedTros(items);
@@ -27,9 +27,9 @@ if (args.length > 0) {
 }
 
 for (let i = 0; i < days; i++) {
-    console.log('-------- day ' + i + ' --------');
+    console.log(`-------- day ${i} --------`);
     console.log('name, sellIn, quality');
-    items.map(item => item.toString()).forEach(item => console.log(item));
+    items.map((item) => item.toString()).forEach((item) => console.log(item));
     console.log();
     app.updateQuality();
 }
