@@ -22,7 +22,7 @@ const app: GildedTros = new GildedTros(items);
 
 let days = 4;
 const args = process.argv.slice(2);
-if (args.length > 0) {
+if (args[0]) {
     days = +args[0] + 1;
 }
 

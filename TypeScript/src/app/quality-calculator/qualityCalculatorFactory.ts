@@ -28,7 +28,7 @@ export function getQualityCalculator(product: Product): QualityCalculator {
                 product.type
         );
     });
-    if (matchingImplementations.length === 0) {
+    if (!matchingImplementations[0]) {
         throw new MissingQualityCalculatorError(
             `No implementation found for ${product.name} with type ${product.type}`
         );

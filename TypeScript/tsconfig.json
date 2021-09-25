@@ -21,13 +21,8 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedParameters": true,
     "baseUrl": ".",
-    "noEmit": true,
-    "strictNullChecks": false // TODO: enable again
+    "noEmit": true
   },
-  "include": [
-    "**/src",
-    "**/test"
-  ],
+  "include": ["**/src", "**/test"],
   "exclude": ["node_modules", "tmp"]
 }
-
