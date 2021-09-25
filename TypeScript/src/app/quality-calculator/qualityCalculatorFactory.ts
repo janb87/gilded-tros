@@ -1,6 +1,6 @@
 import { Product } from '../models/product';
 import { DefaultQualityCalculator } from './implementations/defaultQualityCalculator';
-import { GoodWineQualityCalculator } from './implementations/goodWineQaulityCalculator';
+import { GoodWineQualityCalculator } from './implementations/goodWineQualityCalculator';
 import {
     QualityCalculator,
     QualityCalculatorConstructor,

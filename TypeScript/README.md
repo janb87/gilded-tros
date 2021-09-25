@@ -28,7 +28,7 @@ Decided to use following architecture:
 
 - Split quality calculation logic per type, this way it is easy to add new calculations for new types in the future.
   An interface is used to define the contract. For common logic an abstract base class is used. Decorators are used to describe for which type a calculation class should be used.
-- Use a factory pattern to get the correct instance for calculating the next Qaulity and Sell In values
+- Use a factory pattern to get the correct instance for calculating the next Quality and Sell In values
 
 ## Ideas to improve the implementation
 

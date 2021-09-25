@@ -295,10 +295,10 @@ describe('GildedTrosTest', () => {
             days: 30,
             items,
             getExpectedItem: (originalItem, day) => {
-                const newQaulity = originalItem.quality - day * 2;
+                const newQuality = originalItem.quality - day * 2;
                 return {
                     ...originalItem,
-                    quality: newQaulity < 0 ? 0 : newQaulity,
+                    quality: newQuality < 0 ? 0 : newQuality,
                     sellIn: originalItem.sellIn - day,
                 };
             },
