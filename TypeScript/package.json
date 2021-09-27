@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --outDir dist",
+    "build": "tsc --outDir dist --noEmit false",
     "start": "node -r tsconfig-paths/register -r ts-node/register test/text-test-fixture.ts",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
+    "test": "jest \".*.spec.ts\"",
+    "test:watch": "npm test -- --watchAll",
     "lint": "eslint ."
   },
   "license": "MIT",
@@ -22,6 +22,7 @@
     "babel-jest": "^27.2.1",
     "eslint": "^7.32.0",
     "jest": "^27.2.1",
+    "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
     "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.3"
